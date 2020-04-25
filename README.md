@@ -31,6 +31,8 @@ port 2222
     
 ```
 PasswordAuthentication
+```  
+```
 Host remotessh
 HostName 192.168.33.10
 User vagrant
