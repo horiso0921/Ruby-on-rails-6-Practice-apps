@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.6.4"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
-gem "rails", "~> 6.0.2", ">= 6.0.2.2"
+gem "rails", "~> 6.0.0", ">= 6.0.2.2"
 # Use postgresql as the database for Active Record
 gem "pg", ">= 0.18", "< 2.0"
 # Use Puma as the app server
@@ -32,12 +32,14 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "bcrypt"
 # Railsが出力するエラーメッセージ、日付、時刻、通貨単位などの
 # 翻訳ファイルを集めたGemパッケージ
-
-gem "rails-i18p"
-
+gem "rails-i18n"
+# ページネーション機能のためのGemパッケージ
 gem "kaminari"
-gem "data_validator"
+# 日付のバリデーション（validation:妥当性の調査？）を行う
+# gem "data_validator"
+# メールアドレスのバリデーションを行う
 gem "valid_email2"
+# XML/HTMLの解析生成のためのGemパッケージ
 gem "nokogiri"
 
 group :development, :test do
@@ -59,5 +61,7 @@ group :test do
   gem "capybara", ">= 2.15"
   gem "selenium-webdriver"
   # Easy installation and use of web drivers to run system tests with browsers
-  gem "webdrivers"
+  gem "webdrivers"  
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
