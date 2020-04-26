@@ -14,10 +14,17 @@ Baukis2 は企業向けの顧客管理システム（Ruby on Rails 学習用サ�
 
 1. [Windows + VirtualBox + vagrant + Ubuntu + Docker + Docker Compose で Ruby on Rails + PostgreSQL の開発環境を構築する手順](https://qiita.com/lmatsul/items/175d280db8cf2f069069)  を参考にしてVagrantfileの編集(はじめは下記をコメントアウトしていた)  
 
+<<<<<<< HEAD
 ```
 config.vm.network "forwarded_port", guest: 3000, host: 3000
 config.vm.synced_folder "rails", "/vagrant_data"
 ```
+=======
+  ```
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.synced_folder "rails", "/vagrant_data"
+  ```
+>>>>>>> 33e5de011fbae5cfe2db928178b5e8cde1b87895
 
 2. 次にVsCodeのSSHのconfigを下記の通りにした  
 ```
