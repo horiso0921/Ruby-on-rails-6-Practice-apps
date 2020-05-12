@@ -4,10 +4,7 @@ class ApplicationController < ActionController::Base
     class Forbidden < ActionController::ActionControllerError; end
     class IpAddressRejected < ActionController::ActionControllerError; end 
     
-    rescue_from StandardError, with: :rescue500
-    rescue_from Forbidden, with: :rescue403
-    rescue_from IpAddressRejected, with: :rescue403
-    rescue_from ActiveRecord::RecordNotFound, with: :rescue404
+    include ErrorHandlers if Rails.env.production?
 
     private def set_layout
         if params[:controller].match(%r{\A(staff|admin|customer)/})
