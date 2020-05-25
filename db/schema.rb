@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_05_14_153258) do
     t.index "lower((email)::text)", name: "index_administrators_on_LOWER_email", unique: true
   end
 
-  create_table "staff_members", primary_key: "member_id", force: :cascade do |t|
+  create_table "staff_members", force: :cascade do |t|
     t.string "email", null: false
     t.string "family_name", null: false
     t.string "given_name", null: false

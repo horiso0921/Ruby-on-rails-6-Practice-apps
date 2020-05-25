@@ -1,6 +1,6 @@
 class CreateStaffMembers < ActiveRecord::Migration[6.0]
   def change
-    create_table :staff_members, primary_key: "member_id" do |t|
+    create_table :staff_members do |t|
       t.string :email, null: false # メールアドレス
       t.string :family_name, null: false # 姓
       t.string :given_name, null: false # 名
